@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengelolaan Project IT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">IT</div>
+      <div>
+        <h2>Project IT</h2>
+        <p>Task Management</p>
+      </div>
+    </div>
+
+    <nav>
+      <a class="active" href="#list">Dashboard</a>
+      <a href="#list">Daftar Project</a>
+      <a href="#detail">Detail Project</a>
+      <a href="#task">Task List</a>
+      <a href="#timeline">Timeline</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="header">
+      <div>
+        <h1>Pengelolaan Project IT</h1>
+        <p>Monitoring project, deadline, prioritas, progress, task, tim, dokumen, dan timeline.</p>
+      </div>
+      <button class="btn primary">+ Tambah Project</button>
+    </header>
+
+    <section class="stats-grid">
+      <div class="card stat-card">
+        <p>Total Project</p>
+        <h3>12</h3>
+      </div>
+      <div class="card stat-card">
+        <p>High Priority</p>
+        <h3>4</h3>
+      </div>
+      <div class="card stat-card">
+        <p>On Progress</p>
+        <h3>8</h3>
+      </div>
+      <div class="card stat-card">
+        <p>Selesai</p>
+        <h3>3</h3>
+      </div>
+    </section>
+
+    <section id="list" class="card section-card">
+      <div class="section-header">
+        <div>
+          <h2>Halaman List Project</h2>
+          <p>Tabel berisi Nama Project, Client, Deadline, Priority, dan Progress.</p>
+        </div>
+        <input class="search" type="text" placeholder="Cari project..." />
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Nama Project</th>
+              <th>Client</th>
+              <th>Deadline</th>
+              <th>Priority</th>
+              <th>Progress</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Website Company Profile</td>
+              <td>PT Sinar Digital</td>
+              <td>25 Jan 2026</td>
+              <td><span class="badge high">High</span></td>
+              <td>
+                <div class="progress"><span style="width: 75%"></span></div>
+                <small>75%</small>
+              </td>
+              <td>
+                <button class="btn small">Detail</button>
+                <button class="btn small outline">Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Aplikasi Inventory</td>
+              <td>CV Mandiri Jaya</td>
+              <td>10 Feb 2026</td>
+              <td><span class="badge medium">Medium</span></td>
+              <td>
+                <div class="progress"><span style="width: 45%"></span></div>
+                <small>45%</small>
+              </td>
+              <td>
+                <button class="btn small">Detail</button>
+                <button class="btn small outline">Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Mobile App Booking</td>
+              <td>Travel Nusantara</td>
+              <td>18 Mar 2026</td>
+              <td><span class="badge low">Low</span></td>
+              <td>
+                <div class="progress"><span style="width: 20%"></span></div>
+                <small>20%</small>
+              </td>
+              <td>
+                <button class="btn small">Detail</button>
+                <button class="btn small outline">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="detail" class="detail-grid">
+      <div class="card section-card">
+        <h2>Halaman Detail Project</h2>
+        <div class="project-info">
+          <p><strong>Nama Project:</strong> Website Company Profile</p>
+          <p><strong>Client:</strong> PT Sinar Digital</p>
+          <p><strong>Deadline:</strong> 25 Jan 2026</p>
+          <p><strong>Status:</strong> On Progress</p>
+        </div>
+      </div>
+
+      <div class="card section-card">
+        <h2>Anggota Tim</h2>
+        <ul class="team-list">
+          <li><span>AR</span> Ahmad Rizki - Project Manager</li>
+          <li><span>NS</span> Nadia Sari - UI/UX Designer</li>
+          <li><span>BP</span> Budi Pratama - Backend Developer</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="task" class="detail-grid">
+      <div class="card section-card">
+        <h2>Task List</h2>
+        <ul class="task-list">
+          <li><input type="checkbox" checked /> Analisis kebutuhan client</li>
+          <li><input type="checkbox" checked /> Desain UI halaman utama</li>
+          <li><input type="checkbox" /> Integrasi database</li>
+          <li><input type="checkbox" /> Testing dan deployment</li>
+        </ul>
+      </div>
+
+      <div class="card section-card">
+        <h2>Lampiran Dokumen</h2>
+        <div class="document-list">
+          <div>proposal-project.pdf <button class="btn small outline">Lihat</button></div>
+          <div>desain-ui.fig <button class="btn small outline">Lihat</button></div>
+          <div>timeline.xlsx <button class="btn small outline">Lihat</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="card section-card">
+      <h2>Timeline Project</h2>
+      <div class="timeline">
+        <div class="timeline-item done">
+          <span></span>
+          <div>
+            <h4>Kickoff Meeting</h4>
+            <p>01 Jan 2026 - Selesai</p>
+          </div>
+        </div>
+        <div class="timeline-item done">
+          <span></span>
+          <div>
+            <h4>Desain UI/UX</h4>
+            <p>05 Jan 2026 - Selesai</p>
+          </div>
+        </div>
+        <div class="timeline-item active">
+          <span></span>
+          <div>
+            <h4>Development</h4>
+            <p>12 Jan 2026 - Sedang berjalan</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span></span>
+          <div>
+            <h4>Testing & Deployment</h4>
+            <p>22 Jan 2026 - Belum mulai</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
